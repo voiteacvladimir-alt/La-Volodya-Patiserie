@@ -1,6 +1,4 @@
-/* stil.css - Stilul complet pentru LaVolodya */
 
-/* Reset de bază + fonturi Google */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
@@ -11,19 +9,19 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #eee9ee;          /* crem foarte deschis, ca o prăjitură cu frișcă */
-    color: #4a441f;                     /* maro închis ciocolată */
+    background-color: #eee9ee;          
+    color: #4a441f;                     
     line-height: 1.6;
 }
 
-/* Container principal (max-width pentru centru) */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ------------------- ANTET / HEADER ------------------- */
+
 .antet-site {
     background: linear-gradient(to right, #f9e4e8, #fff0f5);
     padding: 20px 0;
@@ -34,12 +32,12 @@ body {
 }
 
 .antet-site .container {
-    max-width: 1400px;          /* poți mări dacă vrei mai lat */
+    max-width: 1400px;          
     margin: 0 auto;
-    padding: 0 30px;            /* spațiu mic la margini (stânga și dreapta) */
-    display: flex;              /* important! */
-    justify-content: space-between;   /* pune sigla stânga, meniu dreapta */
-    align-items: center;        /* centrează vertical */
+    padding: 0 30px;            
+    display: flex;             
+    justify-content: space-between;   
+    align-items: center;        
 }
 
 .sigla h1 {
@@ -52,7 +50,7 @@ body {
 .bara-navigare ul.meniu-nav {
     list-style: none;
     display: flex;
-    gap: 35px;                  /* spațiu între link-uri */
+    gap: 35px;                  
     margin: 0;
     padding: 0;
 }
@@ -70,12 +68,28 @@ body {
     color: #7e4910;
 }
 
-/* Hero section */
+
 .sectiune-hero {
     position: relative;
     height: 80vh;
     min-height: 500px;
     overflow: hidden;
+}
+
+.sectiune-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    z-index: 1;
 }
 
 .imagine-hero {
@@ -91,8 +105,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: rgb(28, 26, 24);
-    text-shadow: 0 3px 10px rgba(221, 206, 206, 0.6);
+    color: white;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+    z-index: 2;
 }
 
 .text-hero h2 {
@@ -124,7 +139,7 @@ body {
     box-shadow: 0 10px 20px rgba(120, 79, 3, 0.3);
 }
 
-/* Secțiune specialități / produse */
+
 .sectiune-specialitati h2,
 .sectiune-produse h2,
 .sectiune-galerie h2,
@@ -195,7 +210,7 @@ body {
     color: white;
 }
 
-/* Galerie */
+
 .grid-galerie {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -214,7 +229,7 @@ body {
     transform: scale(1.08);
 }
 
-/* Despre noi */
+
 .imagine-despre {
     width: 100%;
     max-width: 500px;
@@ -224,7 +239,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Contact */
+
 #formular-contact {
     max-width: 600px;
     margin: 0 auto 40px;
@@ -255,16 +270,16 @@ body {
     background: #a1126d;
 }
 
-/* Footer */
+
 .subsol-site {
-    background: #4a2c1f;            /* maro închis */
+    background: #4a2c1f;            
     color: white;
     text-align: center;
     padding: 35px 0;
-    margin-top: 300px;              /* împinge footer-ul mai jos */
+    margin-top: 300px;              
 }
 
-/* Responsive - telefon & tabletă */
+
 @media (max-width: 768px) {
     .text-hero h2 { font-size: 3.2rem; }
     .text-hero p  { font-size: 1.3rem; }
