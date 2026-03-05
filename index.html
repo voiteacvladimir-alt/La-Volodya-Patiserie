@@ -3,56 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Volodya Patiserie</title>
+    <title>LaVolodya - Patiseria ta preferată</title>
+    <link rel="stylesheet" href="css/stil.css"> 
 </head>
 <body>
+   
+    <header class="antet-site">
+    <div class="container">
+        <div class="sigla">
+            <h1>LaVolodya</h1>
+        </div>
 
-    <header>
-        <h1>La Volodya</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Acasă</a></li>
-                <li><a href="#">Despre noi</a></li>
-                <li><a href="#">Produse</a></li>
-                <li><a href="#">Torturi de ocazie</a></li>
-                <li><a href="#">Contact</a></li>
+        <nav class="bara-navigare">
+            <ul class="meniu-nav">
+                <li><a href="index.html"   class="link-activ">Acasă</a></li>          
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="despre.html">Despre Noi</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <section>
-            <h2>Bine ați venit la La Volodya</h2>
-            <h1>Patiserie artizanală</h1>
-            <p>Macarons • Torturi • Prăjituri franțuzești • Coapte zilnic cu ingrediente naturale</p>
-            <p><a href="#">Vezi meniul</a> • <a href="#">Fă o comandă</a></p>
-        </section>
+    
+    <section class="sectiune-hero">
+        <img src="imagini/vitrina-principal.jpg" alt="Vitrina LaVolodya cu torturi și prăjituri" class="imagine-hero">
+        <div class="text-hero">
+            <h2>Bine ați venit LaVolodya!</h2>
+            <p>Prăjituri artizanale, torturi delicioase și dulciuri făcute cu dragoste în Chisinau.</p>
+            <a href="produse.html" class="buton-principal">Vezi meniul</a>
+        </div>
+    </section>
 
-        <section>
-            <h2>De ce să ne alegi</h2>
-            <ul>
-                <li>
-                    <h3>Calitate superioară</h3>
-                    <p>Doar ingrediente naturale, fără conservanți artificiali</p>
-                </li>
-                <li>
-                    <h3>Făcut manual</h3>
-                    <p>Fiecare produs este pregătit cu atenție și pasiune</p>
-                </li>
-                <li>
-                    <h3>Proaspăt în fiecare zi</h3>
-                    <p>Copt dimineața pentru gust și textură perfecte</p>
-                </li>
-            </ul>
-        </section>
-    </main>
+ 
+    <section class="sectiune-specialitati">
+        <div class="container">
+            <h2>Specialitățile noastre</h2>
+            <div class="grid-carduri">
+                
+                <div class="card-produs">
+                    <img src="imagini/tort-ciocolata-belgiana.jpg" alt="Tort de ciocolată">
+                    <h3>Tort Ciocolată Belgiană</h3>
+                    <p class="pret">120 lei</p>
+                </div>
+                
+                <div class="card-produs">
+                    <img src="imagini/prajituri-asortate-6buc.jpg" alt="Prăjituri asortate">
+                    <h3>Prăjituri Asortate</h3>
+                    <p class="pret">25 lei / buc</p>
+                </div>
+                
+                <div class="card-produs">
+                    <img src="imagini/tort-fructe-proaspete.jpg" alt="Tort cu fructe">
+                    <h3>Tort cu Fructe Proaspete</h3>
+                    <p class="pret">95 lei</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>© 2025 La Volodya Patiserie</p>
-        <p>Chișinău, Moldova</p>
-        <p>Telefon: +373 69 123 456</p>
-        <p>Email: contact@lavolodya.md</p>
+    
+    <footer class="subsol-site">
+        <div class="container">
+            <p>&copy; 2026 LaVolodya - Toate drepturile rezervate</p>
+        </div>
     </footer>
-
 </body>
 </html>
