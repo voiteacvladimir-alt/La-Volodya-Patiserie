@@ -1,0 +1,38 @@
+<?php
+header('Content-Type: application/json');
+
+
+$input = json_decode(file_get_contents('php://input'), true);
+
+if (!$input) {
+    echo json_encode(['ok' => false, 'mesaj' => 'Date invalide']);
+    exit;
+}
+
+$nume     = trim($input['nume'] ?? '');
+$telefon  = trim($input['telefon'] ?? '');
+$produs   = trim($input['produs'] ?? '');
+$data     = trim($input['data'] ?? '');
+$mentiuni = trim($input['mentiuni'] ?? '');
+
+if ($nume && $telefon && $produs && $data) {
+    $comanda = "---------------------------\n";
+    $comanda .= "Data rezervării: " . date('d-m-Y H:i:s') . "\n";
+    $comanda .= "Nume: $nume\n";
+    $comanda .= "Telefon: $telefon\n";
+    $comanda .= "Produs: $produs\n";
+    $comanda .= "Data livrării: $data\n";
+    $comanda .= "Mențiuni: $mentiuni\n\n";
+
+    $fisier = 'comenzi.txt';
+    
+   
+    if (file_put_contents($fisier, $comanda, FILE_APPEND | LOCK_EX)) {
+        echo json_encode(['ok' => true]);
+    } else {
+        echo json_encode(['ok' => false, 'mesaj' => 'Nu s-a putut salva comanda']);
+    }
+} else {
+    echo json_encode(['ok' => false, 'mesaj' => 'Completați toate câmpurile']);
+}
+?>
